@@ -1,0 +1,105 @@
+.lineastransmision-banner {
+    position: relative;
+    background-image: url('/img/drone.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .banner-subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .lineastransmision-wrapper {
+    padding: 4rem 2rem;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .lineastransmision-contenido {
+    font-size: 1.05rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  .lineastransmision-imagen img {
+    max-width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .lineastransmision-detalles {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .lineastransmision-detalles h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .lineastransmision-detalles p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .lista-diagnostico {
+    list-style: none;
+    padding-left: 0;
+    color: #2d2d2d;
+  }
+  
+  .lista-diagnostico li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .lista-diagnostico li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #005B7F;
+    font-weight: bold;
+  }
+  

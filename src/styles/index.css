@@ -1,0 +1,139 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #000000;
+}
+.btn-acceder{
+  background-color: #000000;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+/* CUERPO*/
+
+.body-container {
+  background: url('/img/transformador.png') no-repeat center;
+  background-size: cover;
+  opacity: 0.9;
+  padding: 5rem 2rem;
+  text-align: left;
+  color: #fff;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+.text-electric {
+  color: #0047AB;
+}
+
+.body-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1a202c; /* gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.body-subtitle {
+  font-size: 1.125rem;
+  color: #4a5568; /* gris medio */
+  margin-bottom: 2rem;
+  max-width: 700px;
+  justify-content: left;
+  
+  margin-right: auto;
+}
+
+.body-buttons {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background-color: #000000; /* azul */
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005B7F;
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  background-color: #f1f1f1;
+  color: #333;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e2e2;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*BOTON SERVICIOS*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%;
+  left: 52;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 0.5rem 0;
+  width: 220px;
+}
+
+.dropdown-menu-custom.open {
+  opacity: 1;
+  transform: translateY();
+  pointer-events: auto;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}

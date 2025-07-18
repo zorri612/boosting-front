@@ -1,0 +1,210 @@
+.transformador-banner {
+    position: relative;
+    background-image: url('/img/transformador.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .banner-subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .transformador-wrapper {
+    padding: 4rem 2rem;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .transformador-contenido {
+    font-size: 1.05rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  .transformador-imagen img {
+    max-width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .transformador-detalles {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .transformador-detalles h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .transformador-detalles p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .lista-diagnostico {
+    list-style: none;
+    padding-left: 0;
+    color: #2d2d2d;
+  }
+  
+  .lista-diagnostico li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .lista-diagnostico li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #005B7F;
+    font-weight: bold;
+  }
+  /* src/components/Transformadores.css */
+.transformadores-container {
+  padding: 2rem;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #004e92;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tipos-transformador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.transformador {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.transformador:hover {
+  transform: translateY(-5px);
+}
+
+.transformador img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.transformador h3 {
+  color: #0056b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.transformador ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.transformador ul li {
+  margin-bottom: 0.4rem;
+}
+
+.diagnosticos {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 78, 146, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.diagnosticos h3 {
+  text-align: center;
+  color: #004e92;
+  margin-bottom: 1.5rem;
+}
+
+.diagnosticos ul {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  font-size: 0.95rem;
+}
+
+.diagnosticos ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.diagnosticos ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2b9e4c;
+}
+
+  

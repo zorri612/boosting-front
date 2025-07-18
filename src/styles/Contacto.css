@@ -1,0 +1,170 @@
+.contacto-container {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .contacto-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a202c;
+  }
+  
+  .contacto-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contacto-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  
+  .contacto-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .contacto-form input,
+  .contacto-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #005B7F;
+    border-radius: 0.5rem;
+  }
+  
+  .contacto-form button {
+    padding: 0.75rem;
+    background-color: #005B7F;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contacto-form button:hover {
+    background-color: #003f58;
+  }
+  
+  .contacto-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .img-hover {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .contacto-numeros{
+    text-align: left;
+  }
+  .redes-sociales {
+    text-align: center;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  
+  .redes-sociales h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+  }
+  
+  .iconos-redes a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .iconos-redes a:hover {
+    color: #2563eb;
+  }
+
+  .burbujas-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .burbuja {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: rgba(37, 99, 235, 0.2);
+    border-radius: 50%;
+    animation: subir 10s infinite ease-in;
+  }
+  
+  .burbuja:nth-child(1) { left: 10%; animation-duration: 12s; width: 25px; height: 25px; }
+  .burbuja:nth-child(2) { left: 20%; animation-duration: 8s; width: 15px; height: 15px; }
+  .burbuja:nth-child(3) { left: 30%; animation-duration: 10s; width: 20px; height: 20px; }
+  .burbuja:nth-child(4) { left: 40%; animation-duration: 14s; width: 22px; height: 22px; }
+  .burbuja:nth-child(5) { left: 50%; animation-duration: 9s; width: 18px; height: 18px; }
+  .burbuja:nth-child(6) { left: 60%; animation-duration: 11s; width: 24px; height: 24px; }
+  .burbuja:nth-child(7) { left: 70%; animation-duration: 13s; width: 16px; height: 16px; }
+  .burbuja:nth-child(8) { left: 80%; animation-duration: 7s; width: 19px; height: 19px; }
+  .burbuja:nth-child(9) { left: 90%; animation-duration: 10s; width: 23px; height: 23px; }
+  .burbuja:nth-child(10) { left: 95%; animation-duration: 15s; width: 21px; height: 21px; }
+  
+  @keyframes subir {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-600px) scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  /* Asegura que el contenido esté sobre las burbujas */
+  .redes-sociales {
+    position: relative;
+    text-align: center;
+    margin-top: 3rem;
+    border-radius: 5px;
+    padding: 4rem 0;
+    overflow: hidden;
+    z-index: 1;
+    background: #005B7F;
+  }
+  .fb-icon {
+    color:aqua;
+  }
+  
+  
