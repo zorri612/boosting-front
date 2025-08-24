@@ -14,6 +14,8 @@ import Motor from './pages/servicios/Motor';
 import Transformador from './pages/servicios/Transformador';
 import Servicios from './pages/Servicios';
 import About from './pages/aboutUs';
+import InfoCardsSection from './pages/InfoCardsSection'; // Ajusta la ruta
+import ServicesSection from './pages/ServicesSection'; // Ajusta la ruta
 
 
 function Header() {
@@ -33,23 +35,24 @@ function Header() {
 
           {/* Nuevo dropdown personalizado */}
           <div className="dropdown" onMouseLeave={() => setOpen(false)}>
-            <button
-              className="btn btn-outline-secondary dropdown-toggle"
-              onClick={() => setOpen(!open)}
-            >
-              Servicios
-            </button>
+          <button
+            className="dropdown-toggle-button"
+            onClick={() => setOpen(!open)}
+          >
+            Servicios
+          </button>
 
-            <ul className={`dropdown-menu-custom ${open ? 'open' : ''}`}>
-              <li><Link to="/servicios/generador" className="dropdown-item">Generador</Link></li>
-              <li><Link to="/servicios/lineas" className="dropdown-item">Líneas de Transmisión</Link></li>
-              <li><Link to="/servicios/actuador" className="dropdown-item">Actuador</Link></li>
-              <li><Link to="/servicios/transformador" className="dropdown-item">Transformador</Link></li>
-              <li><Link to="/servicios/cables" className="dropdown-item">Cables</Link></li>
-              <li><Link to="/servicios/capacitaciones" className="dropdown-item">Capacitaciones</Link></li>
-              <li><Link to="/servicios/motor" className="dropdown-item">Motor</Link></li>
-            </ul>
-          </div>
+          <ul className={`dropdown-menu-custom ${open ? 'open' : ''}`}>
+            <li><Link to="/servicios/generador">Generador</Link></li>
+            <li><Link to="/servicios/lineas">Líneas de Transmisión</Link></li>
+            <li><Link to="/servicios/actuador">Actuador</Link></li>
+            <li><Link to="/servicios/transformador">Transformador</Link></li>
+            <li><Link to="/servicios/cables">Cables</Link></li>
+            <li><Link to="/servicios/capacitaciones">Capacitaciones</Link></li>
+            <li><Link to="/servicios/motor">Motor</Link></li>
+          </ul>
+        </div>
+
 
           <strong><button className="btn-acceder">Acceder</button></strong>
         </nav>
@@ -62,9 +65,9 @@ function Footer() {
   return (
     <footer className="bg-light text-center py-4 mt-5 border-top">
       <Link to="/" className="navbar-brand fw-bold text-primary" ><img src="../../img/logo_black.png" width={90} height={90} alt="logo_boosting" /></Link>
-      <div className="fw-bold">BoostingSAS</div>
-      <div>Ubicación: Calle Ficticia 123, Ciudad Imaginaria</div>
-      <div>Contacto: contacto@boostingsas.com | +57 300 000 0000</div>
+      <div>Ubicación: Carrera 100 #5-169 Oficina 509 B - Cali/ Colombia</div>
+      <div>Presencia Nacional e Internacional</div>
+      <div>Contacto: administración@boostingsas.com | +57 314 828 7297</div>
     </footer>
   );
 }
@@ -84,24 +87,44 @@ function Body() {
       <h1 className="body-title">
          de<span className="text-electric"> Ingeniería Eléctrica</span>
       </h1>
+      <h3 className="body-subtitle">
+        Tecnología Avanzada para la gestión Inteligente de Activos de Potencia.
+      </h3>
       <p className="body-subtitle">
-        En BoostingSAS brindamos soluciones innovadoras, eficientes y seguras. Conoce nuestros servicios y transforma tus ideas en realidad.
+        Diagnóstico | Monitoreo continuo | Soluciones Predictivas | Inteligencia Artificial
       </p>
-      <p className="body-subtitle">
-        En BoostingSAS brindamos soluciones innovadoras, eficientes y seguras. Conoce nuestros servicios y transforma tus ideas en realidad.
-      </p>
-      <p className="body-subtitle">
-        En BoostingSAS brindamos soluciones innovadoras, eficientes y seguras. Conoce nuestros servicios y transforma tus ideas en realidad.
-      </p>
-      <p className="body-subtitle">
-        En BoostingSAS brindamos soluciones innovadoras, eficientes y seguras. Conoce nuestros servicios y transforma tus ideas en realidad.
-      </p>
+
       <div className="body-buttons">
         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="btn btn-primary">
           Conocer Servicios
         </motion.button>
 
         <Link to="/aboutus" className="btn btn-outline-secondary">Sobre Nosotros</Link>
+        </div>
+
+        <div className="contenedor-introduccion-nuevos-servicios">
+          <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        ></motion.div>
+        <h2 className="titulo-introduccion-nuevos-servicios">
+          Boosting se actualizó para ti.
+        </h2>
+        <h3 className="titulo-introduccion-nuevos-servicios">
+          Explora nuestros <span className="text-electric"> Nuevos Servicios, </span>
+          con la excelencia técnica de siempre.
+        </h3>
+        </div>
+
+
+        <div className='body-info-cards'>
+          <InfoCardsSection />
+        </div>
+
+        <div className='body-info-cards'>
+          <ServicesSection />
         </div>
     </main>
   );

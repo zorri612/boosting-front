@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube,  } from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import { Helmet } from "react-helmet";
+import TeamSection from './TeamSection'; // Ajusta la ruta si es necesario
 
 
 function Contacto() {
@@ -21,13 +22,19 @@ function Contacto() {
       >
         ¡Contáctanos!
       </motion.h2>
-      <div className='contacto-numeros'>
+      <div>
+            {/* Otros elementos de tu página de contacto */}
+            <TeamSection />
+          </div>
+
+
+      {/*<div className='contacto-numeros'>
         <p>
           <img src="img/whatsappblack.png" alt="wpp_logo" width={45} height={45} />
           <strong>  +57 3215421054 </strong>
         </p>
       </div>
-
+*/}
       <div className="contacto-content">
         {/* Formulario */}
         <motion.form
@@ -37,7 +44,10 @@ function Contacto() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <p>Hola</p>
+          <h4 style={{ margin: '50px' }}>
+            Si lo prefieres, déjanos tu información 
+            y te contactamos por correo electrónico.</h4>
+
           <label>Nombre</label>
           <input type="text" placeholder="Tu nombre completo" />
 
