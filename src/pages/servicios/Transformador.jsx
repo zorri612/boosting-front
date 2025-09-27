@@ -20,7 +20,7 @@ function Transformador() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Transformador
+            Transformadores
           </motion.h1>
           <motion.p
             className="banner-subtitle"
@@ -48,34 +48,16 @@ function Transformador() {
           la energía eléctrica alterna de un nivel de tensión a otro mediante la
           inducción electromagnética. Están compuestos por bobinas devanadas sobre
           un núcleo de material ferromagnético, aisladas entre sí.</p>
+          <p>Por eso, en <strong>Boosting</strong> sabemos lo importante que es tener este dispositivo
+          en óptimas condiciones de funcionamiento y ofrecemos los siguientes servicios:</p>
       </motion.section>
       </div>
       
 
       {/* Nueva sección visual y técnica */}
-      <section className="transformadores-container">
+    <section className="transformadores-container">
     
-      <div className="tipos-transformador">
-        <div className="transformador">
-          <img src={aceiteImg} alt="Transformador en aceite" />
-          <h3>Transformador Sumergido en Aceite</h3>
-          <ul>
-            <li>Ideal para exteriores</li>
-            <li>Utiliza aceite como aislante</li>
-            <li>Mayor capacidad de enfriamiento</li>
-          </ul>
-        </div>
-
-        <div className="transformador">
-          <img src={secoImg} alt="Transformador seco" />
-          <h3>Transformador Seco</h3>
-          <ul>
-            <li>Ideal para interiores</li>
-            <li>Sin líquidos aislantes</li>
-            <li>Mayor seguridad ante incendios</li>
-          </ul>
-        </div>
-      </div>
+      
 
       <div className="diagnosticos">
         <h3>Diagnósticos y Servicios</h3>

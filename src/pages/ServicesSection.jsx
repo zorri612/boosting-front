@@ -1,15 +1,15 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import '../styles/ServicesSection.css'; // Asegúrate de crear este archivo CSS
+import '../styles/ServicesSection.css'; 
 
 const services = [
   {
     id: 1,
     title: 'MÁQUINAS ROTATIVAS: GENERADORES Y MOTORES',
     images: [
-      '/img/generador1.jpeg',
-      '/img/generador2.jpeg',
-      '/img/generador3.jpeg',
+      '/img/maquinas-rotativas/generador-alta.png',
+      '/img/maquinas-rotativas/motor-electrico.png',
+      '/img/maquinas-rotativas/bobina.png',
     ],
     to: '/servicios/maquinas-rotativas',
   },
@@ -17,43 +17,43 @@ const services = [
     id: 2,
     title: 'MÁQUINAS ESTÁTICAS: TRANSFORMADORES, INTERRUMPTORES Y SECCIONADORES',
     images: [
-      '/lineas-transmision/imagen1.jpg',
-      '/lineas-transmision/imagen2.jpg',
-      '/lineas-transmision/imagen3.jpg',
+      '/img/maquinas-estaticas/transformadores1.png',
+      '/img/maquinas-estaticas/transformadores2.png',
+      '/img/maquinas-estaticas/transformadores3.jpeg',
     ],
-    to: '/servicios/lineas-transmision',
+    to: '/servicios/maquinas-estaticas',
   },
   {
     id: 3,
     title: 'CABLES DE POTENCIA',
     images: [
-      '/lineas-transmision/imagen1.jpg',
-      '/lineas-transmision/imagen2.jpg',
-      '/lineas-transmision/imagen3.jpg',
+      '/img/cables-potencia/cables1.jpeg',
+      '/img/cables-potencia/cables2.jpg',
+      '/img/cables-potencia/cables3.png',
+      '/img/cables-potencia/cables4.jpeg',
     ],
-    to: '/servicios/lineas-transmision',
+    to: '/servicios/cables-potencia',
   },
   {
     id: 4,
     title: 'MONTAJES Y MONITOREO EN LÍNEA',
     images: [
-      '/lineas-transmision/imagen1.jpg',
-      '/lineas-transmision/imagen2.jpg',
-      '/lineas-transmision/imagen3.jpg',
+      '/img/montajes/montajes1.jpeg',
+      '/img/montajes/montajes2.jpeg',
+      '/img/montajes/montajes3.jpeg',
     ],
-    to: '/servicios/lineas-transmision',
+    to: '/servicios/montajes-monitoreo',
   },
   {
     id: 5,
     title: 'AUTOMATIZACIÓN Y CENTRO DE DATOS',
     images: [
-      '/lineas-transmision/imagen1.jpg',
-      '/lineas-transmision/imagen2.jpg',
-      '/lineas-transmision/imagen3.jpg',
+      '/img/automatizacion/automatizacion1.jpg',
+      '/img/automatizacion/automatizacion2.jpeg',
+      '/img/automatizacion/automatizacion3.jpg',
     ],
-    to: '/servicios/lineas-transmision',
+    to: '/servicios/automatizacion',
   },
-  // Añade más servicios aquí...
 ];
 
 const ServicesSection = () => {

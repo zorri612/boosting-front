@@ -45,7 +45,7 @@ a {
 .body-title {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #1a202c; /* gris oscuro */
+  color: #2c2e30; /* gris oscuro */
   margin-bottom: 1rem;
 }
 
@@ -166,4 +166,102 @@ html {
   background-color: #f0f8ff; /* Color de fondo suave */
   padding: 2rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Estilos del contenedor del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Estilos de la lista del menú principal */
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 1000; /* Asegura que se muestre por encima de otros elementos */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+/* Muestra el menú principal cuando la clase 'open' está presente */
+.dropdown-menu-custom.open {
+  display: block;
+}
+
+/* Estilos de los elementos de la lista */
+.dropdown-menu-custom li {
+  position: relative; /* CRUCIAL: Contenedor para el submenú */
+  white-space: nowrap;
+}
+
+.dropdown-menu-custom li a,
+.dropdown-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu-custom li a:hover,
+.dropdown-link:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+/* Estilos para padres con submenú */
+.has-submenu > .dropdown-link {
+  font-weight: 500;
+}
+
+/* Estilos del submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Posiciona el submenú a la derecha */
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 220px;
+  z-index: 1001; /* Asegura que el submenú esté por encima del menú principal */
+}
+
+/* Muestra el submenú al pasar el cursor sobre el padre */
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+/* **NUEVAS REGLAS** para el alineamiento dinámico */
+
+/* Cuando el contenedor principal tiene la clase 'align-right' */
+.dropdown.align-right .dropdown-menu-custom {
+  left: auto;
+  right: 0; /* Mueve el menú principal hacia la izquierda */
+}
+
+/* Y el submenú también se invierte */
+.dropdown.align-right .submenu {
+  left: auto;
+  right: 100%; /* Mueve el submenú hacia la izquierda */
 }

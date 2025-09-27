@@ -25,7 +25,7 @@
 }
 
 .info-image {
-  width: 80%; /* Ajusta el tamaño de la imagen dentro del círculo */
+  width: 110%; /* Ajusta el tamaño de la imagen dentro del círculo */
   height: auto;
   object-fit: contain;
 }

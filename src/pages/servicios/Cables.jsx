@@ -1,111 +1,122 @@
+// src/pages/Cables.jsx
+import React from 'react';
 import '../../styles/Cables.css';
 import { motion } from 'framer-motion';
-import cableImg from "../../assets/cables.png"; // reemplaza por tu ruta real
-import cable2Img from "../../assets/cables2.png"; // reemplaza por tu ruta real
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
+// Importa el nuevo componente de tarjeta
+import CableCard from '../CableCard'; 
+
+// Importa las imágenes que usarás en el carrusel
+import cable1_1 from "../../assets/cables-img/cable1_1.png";
+import cable1_2 from "../../assets/cables-img/cable1_2.png";
+import cable2_1 from "../../assets/cables-img/cable2_1.png";
+import cable2_2 from "../../assets/cables-img/cable2_2.png";
+import cable3_1 from "../../assets/cables-img/cable3_1.png";
+import cable3_2 from "../../assets/cables-img/cable3_2.png";
+import cable3_3 from "../../assets/cables-img/cable3_3.png";
+
+// Datos para las tarjetas (puedes añadir más si tienes más de 3)
+const cableData = [
+  {
+    title: "Pruebas de Aislamiento y Descargas Parciales",
+    description: `Verificamos la integridad del sistema de aislamiento mediante técnicas como descargas parciales, tangente delta y RI.`,
+    description2: `Estas pruebas permiten:`,
+    features: ["•	Detectar defectos invisibles a simple vista en el aislamiento.", "•	Reducir el riesgo de fallas eléctricas inesperadas.", "•	Extender la vida útil de los cables."],
+    images: [cable1_1, cable1_2],
+    description3: `Beneficio clave: seguridad y confiabilidad al máximo nivel.`,
+
+  },
+  {
+    title: "Pruebas de Impedancia del conductor",
+    description: `Medimos la resistencia del conductor y la continuidad de todo el trayecto del cable para asegurar una instalación correcta y eficiente, mediante técnicas como TDR, Rohm, L, entre otras.`,
+    description2: `Con esta prueba se pueden identificar:`,
+    features: ["•	Empalmes defectuosos.", "•	Problemas de corrosión o desgaste.", "•	Pérdidas eléctricas que afectan el rendimiento."],
+    images: [cable2_1, cable2_2],
+    description3: ` Beneficio clave: mayor eficiencia energética y reducción de costos.`,
+  },
+  {
+    title: "Pruebas de Alta Tensión y Puesta en Servicio",
+    description: `Realizamos ensayos de alta tensión (HIPOT, VLF coseno rectangular, VLF senoidal, termografía) antes de la puesta en operación, tras una reparación, o prueba de mantenimiento.`,
+    description2: `Su objetivo es:`,
+    features: ["•	Confirmar que el cable soporta condiciones nominales y sobretensiones.", "•	Garantizar la seguridad de las instalaciones.", "•	Asegurar el cumplimiento normativo."],
+    images: [cable3_1, cable3_2, cable3_3],
+    description3: `Beneficio clave: tranquilidad al poner en servicio un sistema seguro y robusto.`,
+  },
+];
 
 function Cables() {
   return (
-
     <>
-    <Helmet>
+      <Helmet>
         <title>Cables | Boosting</title>
       </Helmet>
-
-    <div>
-      {/* Banner principal */}
-      <section className="cables-banner">
-        <div className="banner-content">
-          <motion.h1
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            CABLES DE MEDIA TENSIÓN
-          </motion.h1>
-          <motion.p
-            className="banner-subtitle"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
-           <strong>Cables de media tensión con cubiertas aisladas PVC, XLPE, EPR <br />
-           de cualquier tipo de configuración interna
-           </strong> 
-           
-          </motion.p>
-        </div>
-      </section>
-      <div className="actuador-wrapper">
-      {/* Encabezado animado */}
-      <motion.section 
-        className="actuador-header"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-
-        <p className='cables-justy'>
-        El término cable significa en su origen “cuerda”, del latín Capulum,
-         o también del Hebreo Kabel de “cuerda fuerte”, cable eléctrico se le
-          llama a una manguera de material aislante y protector que contiene 
-          un conductor (también hilo eléctrico) aislado o conjunto de conductores
-           aislados (conductor eléctrico), generalmente de cobre o aluminio. 
-           Existen distintos tipos de cables tanto como configuraciones y usos,
-            en especial en el ámbito industrial, los cables más usados son los
-             recubiertos que oscilan entre niveles de tensión desde 5 KV hasta 60 KV.</p>
-      </motion.section>
-      </div>
-      
-
-      {/* Nueva sección visual y técnica */}
-      <section className="cableses-container">
-    
-      <div className="tipos-cables">
-        <div className="cables">
-          <img src={cableImg} alt="cables en aceite" />
-        
-        </div>
-        <div className="cables">
-          <img src={cable2Img} alt="cables en aceite" />
-        
-        </div>
-        </div>
-        <section>
-        <div className='actuador-header'>
-          <p className='cables-justy'>
-            En <strong>Boosting SAS </strong>sabemos que la importancia de un funcionamiento de un
-             circuito libre de fallas tiene un impacto económico alto para el desarrollo de todas
-              las empresas, por eso nos dedicamos a evaluar el estado de todos los activos posibles
-               de los sistemas eléctricos para que no tengas que reaccionar ante estos eventos,
-                sino que se puedan prever todas las posibilidades y soluciones antes de un siniestro.</p>
-        </div>
+      <div>
+        <section className="cables-banner"> 
+          <div className="banner-content"> 
+            <motion.h1 
+              initial={{ opacity: 0, y: -30 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.6 }} 
+            > 
+              CABLES DE MEDIA TENSIÓN 
+            </motion.h1> 
+            <motion.p 
+              className="banner-subtitle" 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              transition={{ delay: 0.5, duration: 0.6 }} 
+            > 
+              <strong>Cables de media tensión con cubiertas aisladas PVC, XLPE, EPR <br /> 
+              de cualquier tipo de configuración interna 
+              </strong>  
+            </motion.p> 
+          </div> 
         </section>
-
-  
-
-      <div className="diagnosticos">
-        <p>
-      Para estos activos en especial se ha dispuesto de las siguientes evaluaciones
-       con las que de seguro tus activos contarán con una historia clínica de muy alto 
-       nivel eliminando por completo fallas no previstas por desgastes en el sistema de aislamiento:
-       </p>
-        <ul>
-          <li> Inyección de tensión de prueba a muy baja frecuencia (VLF)</li>
-          <li>Prueba de Factor de Disipación o tangente delta (FD)</li>
-          <li>Pruebas de Descargas Parciales con localización de falla</li>
-          <li>Reflectometría en el dominio del tiempo (TDR)</li>
-          <li>Termografía.</li>
+        <div className="actuador-wrapper"> 
+          <motion.section  
+            className="actuador-header" 
+            initial={{ opacity: 0, y: -30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6 }} 
+          > 
+            <p className='cables-justy'> 
+              En <strong>Boosting</strong> realizamos pruebas especializadas a cables de potencia para garantizar su  
+              confiabilidad, seguridad y desempeño a lo largo de toda su vida útil. Nuestros ensayos 
+              cumplen con estándares internacionales (IEC, IEEE) y permiten detectar fallas incipientes  
+              antes de que se conviertan en problemas críticos.
+            </p> 
+            <p className='padding-top-40px'>
+            <strong>Explora nuestras principales pruebas:</strong> </p>
+          </motion.section> 
           
-        </ul>
+        </div>
+        
+        {/* Nueva sección con las tarjetas dinámicas */}
+        <section className="cableses-container">
+          <div className="tipos-cables">
+            {cableData.map((cable, index) => (
+              <CableCard
+                key={index}
+                title={cable.title}
+                description={cable.description}
+                description2={cable.description2}
+                features={cable.features}
+                images={cable.images}
+                description3={cable.description3}
+              />
+            ))}
+          </div>
+        </section>
+        <div className='contenedor-contactanos'>
+        <center><h4>¿Quieres conocer más o solicitar una prueba?</h4></center>
+        <center><h4><a href="/contacto">Contáctanos</a></h4></center>
       </div>
-    
-    </section>
-    </div>
+        
+        {/* ... (el resto de tu código, como la sección de diagnósticos) ... */}
+      </div>
     </>
   );
 };
-
 
 export default Cables;

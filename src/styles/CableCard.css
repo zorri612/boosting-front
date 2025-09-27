@@ -1,0 +1,31 @@
+/* Animación para el carrusel de imágenes */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33.33% { transform: translateX(-100%); }
+  66.66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
+.cables {
+  /* Mantén tus estilos para la tarjeta, como borde, sombra, etc. */
+}
+
+.cable-carousel-container {
+  width: 100%;
+  height: 200px; /* Ajusta la altura a tu gusto */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.cable-carousel {
+  display: flex;
+  width: 300%; /* 100% por cada imagen, si son 3 */
+  height: 100%;
+  animation: slide 15s infinite linear; /* Ajusta la duración y el tipo de animación si quieres pausas */
+}
+
+.carousel-img {
+  width: calc(100% / 3); /* Cada imagen ocupa 1/3 del ancho total */
+  height: 100%;
+  object-fit: cover;
+}

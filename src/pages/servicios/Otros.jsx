@@ -10,7 +10,7 @@ function Generador() {
 
     <>
     <Helmet>
-        <title>Generador | Boosting</title>
+        <title>Otros Servicios | Boosting</title>
       </Helmet>
 
     <div>
@@ -22,7 +22,7 @@ function Generador() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            GENERADORES
+            OTROS
           </motion.h1>
           <motion.p
             className="banner-subtitle"
@@ -51,24 +51,15 @@ function Generador() {
       ></motion.section>
         <div className="generador-contenido">
            <p>
-           Un generador eléctrico es todo dispositivo capaz de transformar la energía mecánica en eléctrica.
-            Esta transformación se consigue por la acción de un campo magnético sobre los conductores eléctricos
-             dispuestos sobre una armadura (denominada también estátor). Todo el sistema basado principalmente en la ley de Faraday.
+          OTROS
              </p>
-            <p>
-|           Sin embargo, este dispositivo necesita de un sistema de protección ante el control de la energía al que se le denomina
-             sistema de aislamiento.
-            Este sistema de aislamiento esta relacionado directamente con la vida útil del generador y con el funcionamiento libre
-             de fallas en un porcentaje mayor al 60%, por lo que la evaluación de su condición es una prioridad para los dueños de dichas máquinas.
-              </p>
-          <div className="generador-imagen">
-            <img src={generadorImage} alt="Generador eléctrico" />
-          </div>
+            
+         
 
           <div className="tipos-generador"> 
           <div className="generador"> 
           <img src={aceiteImg} alt="Generador hidraulico" />
-          <h3>Generadores Hidráulicos</h3>
+          <h3>Paneles Solares</h3>
           <ul>
             <li>Ideal para </li>
             <li>Utiliza  como </li>
@@ -78,7 +69,7 @@ function Generador() {
 
         <div className="generador"> 
           <img src={secoImg} alt="Generador seco" />
-          <h3>Generadores Diésel</h3>
+          <h3>Interruptores y seccionadores</h3>
           <ul>
             <li>Ideal</li>
             <li>Sin  </li>
@@ -88,7 +79,7 @@ function Generador() {
 
         <div className="generador"> 
           <img src={secoImg} alt="Turbogenerador" />
-          <h3>Turbogeneradores</h3>
+          <h3>Montajes eléctricos y de comunicaciones</h3>
           <ul>
             <li>Ideal</li>
             <li>Sin  </li>

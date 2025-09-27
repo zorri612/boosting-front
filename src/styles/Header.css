@@ -1,0 +1,99 @@
+.header-logo {
+  max-width: 100px;
+  height: auto;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+/* Estilos para el botón de hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto en escritorio */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
+/* Estilos del menú de navegación para móviles */
+@media (max-width: 991.98px) {
+  .header-nav {
+    display: none; /* Oculta el menú por defecto en móviles */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 10;
+  }
+  
+  .header-nav.open {
+    display: flex; /* Muestra el menú cuando tiene la clase 'open' */
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Muestra el botón de hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Animación del icono de hamburguesa */
+  .menu-toggle.open .hamburger-icon {
+    background-color: transparent;
+  }
+  
+  .menu-toggle.open .hamburger-icon::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.open .hamburger-icon::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
