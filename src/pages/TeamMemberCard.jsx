@@ -1,8 +1,9 @@
 import React from 'react';
 import '../styles/TeamMemberCard.css';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 // Agregamos la prop 'profileUrl'
-const TeamMemberCard = ({ name, title, specialty, email, imageUrl, profileUrl }) => {
+const TeamMemberCard = ({ name, title, specialty, email, linkedinUrl, imageUrl, profileUrl }) => {
   return (
     // La card completa tendrá un efecto hover
     <div className="team-member-card">
@@ -16,7 +17,12 @@ const TeamMemberCard = ({ name, title, specialty, email, imageUrl, profileUrl })
         <h3 className="member-name">{name}</h3>
         <p className="member-title">{title}</p>
         <p className="member-specialty">{specialty}</p>
+        <p>
+          
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="member-linkedin"><FaLinkedin /></a>
+        </p>
         <a href={`mailto:${email}`} className="member-email">{email}</a>
+        
       </div>
     </div>
   );

@@ -1,0 +1,201 @@
+.otros-banner {
+    position: relative;
+    background-image: url('/img/banner3.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .banner-subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .otros-wrapper {
+    padding: 4rem 2rem;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .otros-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .otros-header h1 {
+    font-size: 2.5rem;
+    color: #004080;
+  }
+  
+  .otros-header p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .otros-contenido {
+    font-size: 1.05rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  /* 1. Estilos del CONTENEDOR para alinear las imágenes (usando Flexbox) */
+.otros-imagen {
+  display: flex; /* <-- ¡La clave para ponerlas una al lado de la otra! */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 20px; /* Añade espacio entre las imágenes */
+  flex-wrap: wrap; /* Asegura que si hay muchas, pasen a la siguiente línea en móviles */
+}
+
+/* 2. Estilos de las IMÁGENES individuales */
+.otros-imagen img {
+  /* Usaremos un porcentaje menor para el ancho, ajustado para el espacio entre ellas */
+  width: 300px; /* Tamaño fijo, o... */
+  max-width: 45%; /* ...un porcentaje, para que dos quepan con espacio */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Opcional: Ajuste para el móvil */
+@media (max-width: 768px) {
+  .otros-imagen img {
+    max-width: 100%; /* Una imagen por línea en móvil */
+  }
+}
+  
+  .otros-detalles {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .otros-detalles h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .otros-detalles p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .lista-diagnostico {
+    list-style: none;
+    padding-left: 0;
+    color: #2d2d2d;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .lista-diagnostico li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    text-align: center;
+
+  }
+  
+  .lista-diagnostico li::before {
+    content: 'R';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #005B7F;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  
+  /* NUEVO */
+  .tipos-otros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.otros {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.otros-bigger {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.otros:hover {
+  transform: translateY(-5px);
+}
+
+.otros img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.otros h3 {
+  color: #0056b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.otros ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.otros ul li {
+  margin-bottom: 0.4rem;
+}

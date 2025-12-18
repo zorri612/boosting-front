@@ -7,9 +7,10 @@ const teamMembers = [
   {
     id: 1,
     name: 'ALEJANDRO TENORIO',
-    title: 'CEO Boosting sas',
-    specialty: 'Msc. Eng electrónico- especialista en visión artificial y análisis termográfico',
+    title: 'CEO Boosting SAS',
+    specialty: 'Msc. Ing Electrónico - Especialista en visión artificial y análisis termográfico',
     email: 'gerencia@boostingsas.com',
+    linkedinUrl: 'https://co.linkedin.com/in/alejandrotenoriot',
     imageUrl: '/img/foto-alejandro.jpeg',
     profileUrl: 'https://api.whatsapp.com/send/?phone=3173852916&text=Hola!%20Estoy%20interesado(a)%20en%20los%20servicios%20de%20BOOSTING&type=phone_number&app_absent=0' // Reemplaza con el enlace real
   },
@@ -17,8 +18,9 @@ const teamMembers = [
     id: 2,
     name: 'JUAN DAVID ZORRILLA H.',
     title: 'DIRECTOR DE OPERACIONES',
-    specialty: 'Msc. Eng Electricista - especialista IA para Descargas Parciales en Máquinas Rotativas',
+    specialty: 'Msc. Ing Electricista - Especialista IA para Descargas Parciales en Máquinas Rotativas',
     email: 'juan.zorrilla@boostingsas.com',
+    linkedinUrl: 'https://co.linkedin.com/in/juan-david-zorrilla-henao-627063107',
     imageUrl: '/img/foto-juan.jpeg',
     profileUrl: 'https://api.whatsapp.com/send/?phone=3167068565&text=Hola!%20Estoy%20interesado(a)%20en%20los%20servicios%20de%20BOOSTING.&type=phone_number&app_absent=0' // Reemplaza con el enlace real
   },
@@ -45,6 +47,7 @@ const TeamSection = () => {
             title={member.title}
             specialty={member.specialty}
             email={member.email}
+            linkedinUrl={member.linkedinUrl}
             imageUrl={member.imageUrl}
             profileUrl={member.profileUrl} // Pasamos la nueva prop
           />

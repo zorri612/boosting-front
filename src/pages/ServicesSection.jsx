@@ -11,7 +11,7 @@ const services = [
       '/img/maquinas-rotativas/motor-electrico.png',
       '/img/maquinas-rotativas/bobina.png',
     ],
-    to: '/servicios/maquinas-rotativas',
+    to: '/servicios/generadores',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const services = [
       '/img/maquinas-estaticas/transformadores2.png',
       '/img/maquinas-estaticas/transformadores3.jpeg',
     ],
-    to: '/servicios/maquinas-estaticas',
+    to: '/servicios/transformadores',
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const services = [
       '/img/cables-potencia/cables3.png',
       '/img/cables-potencia/cables4.jpeg',
     ],
-    to: '/servicios/cables-potencia',
+    to: '/servicios/cables',
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const services = [
       '/img/montajes/montajes2.jpeg',
       '/img/montajes/montajes3.jpeg',
     ],
-    to: '/servicios/montajes-monitoreo',
+    //to: '/servicios/montajes-monitoreo',
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const services = [
       '/img/automatizacion/automatizacion2.jpeg',
       '/img/automatizacion/automatizacion3.jpg',
     ],
-    to: '/servicios/automatizacion',
+    //to: '/servicios/automatizacion',
   },
 ];
 

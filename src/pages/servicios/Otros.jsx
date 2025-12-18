@@ -1,11 +1,11 @@
-import '../../styles/Generador.css';
+import '../../styles/Otros.css';
 import { motion } from 'framer-motion';
-import generadorImage from '../../assets/generador2.png'; // Asegúrate de tener esta imagen
-import aceiteImg from "../../assets/transformador-aceite.png"; // reemplaza por tu ruta real
-import secoImg from "../../assets/transformador-seco.png";
+import seccionadores from "../../assets/otros/seccionadores.jpeg"; // reemplaza por tu ruta real
+import paneles from "../../assets/otros/paneles.png";
+import rack from "../../assets/otros/rack.png";
 import { Helmet } from "react-helmet";
 
-function Generador() {
+function otros() {
   return (
 
     <>
@@ -15,7 +15,7 @@ function Generador() {
 
     <div>
       {/* Banner principal */}
-      <section className="generador-banner">
+      <section className="otros-banner">
         <div className="banner-content">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
@@ -30,8 +30,7 @@ function Generador() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           ><strong>
-            Hidrogeneradores, Turbogeneradores, Plantas Diésel,<br />
-            Dinamómetros de media potencia
+           Servicios Electrotécnicos Complementarios y Proyectos a la Medida.<br />
             </strong>
           </motion.p>
         </div>
@@ -41,74 +40,44 @@ function Generador() {
       
 
       {/* Nueva sección visual y técnica */}
-      <section className="generador-wrapper">
+      <section className="otros-wrapper">
          {/* Encabezado animado */}
       <motion.section 
-        className="generador-header"
+        className="otros-header"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       ></motion.section>
-        <div className="generador-contenido">
+        <div className="otros-contenido">
            <p>
-          OTROS
+          En <strong>Boosting SAS</strong> entendemos que la confiabilidad de sus operaciones depende de una infraestructura eléctrica robusta y bien planificada. 
+          Por ello, complementamos nuestros servicios de diagnóstico y mantenimiento con Soluciones Integrales y Soporte Especializado en Infraestructura Eléctrica.
              </p>
+          <p>Esta área está diseñada para abarcar las necesidades auxiliares y de proyecto de su empresa, asegurando que cada componente, desde la generación hasta el
+          punto de consumo, opere con máxima eficiencia y seguridad.</p>
             
          
 
-          <div className="tipos-generador"> 
-          <div className="generador"> 
-          <img src={aceiteImg} alt="Generador hidraulico" />
+          <div className="tipos-otros"> 
+          <div className="otros"> 
+          <img src={paneles} alt="otros hidraulico" />
           <h3>Paneles Solares</h3>
-          <ul>
-            <li>Ideal para </li>
-            <li>Utiliza  como </li>
-            <li>Mayor  de </li>
-          </ul>
+          
         </div>
 
-        <div className="generador"> 
-          <img src={secoImg} alt="Generador seco" />
+        <div className="otros"> 
+          <img src={seccionadores} alt="otros seco" />
           <h3>Interruptores y seccionadores</h3>
-          <ul>
-            <li>Ideal</li>
-            <li>Sin  </li>
-            <li>Mayor  ante </li>
-          </ul>
+          
         </div>
 
-        <div className="generador"> 
-          <img src={secoImg} alt="Turbogenerador" />
+        <div className="otros"> 
+          <img src={rack} alt="Turbootros" />
           <h3>Montajes eléctricos y de comunicaciones</h3>
-          <ul>
-            <li>Ideal</li>
-            <li>Sin  </li>
-            <li>Mayor  ante </li>
-          </ul>
+          
         </div>
       </div>
         
-          <div className="generador-detalles">
-            <h2>Evaluación integral de generadores eléctricos</h2>
-            <p>
-            En Boosting SAS somos especialistas en la evaluación de la condición de los generadores
-             a través de un conjunto de diagnósticos de forma integral para todos sus sistemas, 
-             no solo el sistema de aislamiento sino también de sistemas como: Lubricación, Acoplamiento,
-              Intercambiador, etc.). Todos estos a través de:
-              </p>
-            <ul className="lista-diagnostico">
-              <li> Resistencia de aislamiento (IR)</li>
-              <li> Índice de polarización (IP)</li>
-              <li> Índice de absorción (DAR)</li>
-              <li> Descarga dieléctrica (DD)</li>
-              <li>Resistencia de devanados</li>
-              <li> Tangente delta (FD)</li>
-              <li> Descargas parciales (DP)</li>
-              <li> Análisis de vibración</li>
-              <li> Evaluación de lubricación</li>
-              <li> Alineación láser</li>
-            </ul>
-          </div>
         </div>
       </section>
     </div>
@@ -116,4 +85,4 @@ function Generador() {
   );
 }
 
-export default Generador;
+export default otros;

@@ -1,0 +1,59 @@
+.accesoContainer {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.accesoTitle {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #0047ab;
+}
+
+.accesoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.accesoCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.accesoCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 71, 171, 0.25);
+}
+
+.accesoIcon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.accesoCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.accesoCard p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accesoGrid {
+    grid-template-columns: 1fr;
+  }
+}

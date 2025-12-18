@@ -7,10 +7,15 @@ import TeamSection from './TeamSection';
 import { useState } from 'react';
 import Modal from '../components/Modal';
 
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+
+
 function Contacto() {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
+    telefono: '',
     mensaje: ''
   });
 
@@ -25,7 +30,7 @@ function Contacto() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:4000/enviar-correo', {
+      const response = await fetch('https://boosting-back-new.vercel.app/enviar-correo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -34,7 +39,7 @@ function Contacto() {
       });
       if (response.ok) {
         alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
-        setFormData({ nombre: '', email: '', mensaje: '' });
+        setFormData({ nombre: '', email: '', telefono: '', mensaje: '' });
       } else {
         alert('Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo más tarde.');
         
@@ -105,6 +110,18 @@ function Contacto() {
               required 
             />
 
+            <label>Teléfono (Opcional)</label>
+
+            <PhoneInput
+              international
+              defaultCountry="CO"
+              countryCallingCodeEditable={false}
+              placeholder="Ej: +57 300 123 4567"
+              value={formData.telefono}
+              onChange={(value) => setFormData({ ...formData, telefono: value || "" })}
+              
+            />
+
             <label>Mensaje</label>
             <textarea 
               rows="5" 
@@ -126,7 +143,7 @@ function Contacto() {
             viewport={{ once: true }}
           >
             <motion.img
-              src="img/contacto1.jpg"
+              src="img/contacto1.jpeg"
               alt="Ilustración 1"
               className="img-hover"
               whileHover={{ scale: 1.05 }}
@@ -147,23 +164,14 @@ function Contacto() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Síguenos en nuestras redes sociales
+          Síguenos en Instagram
         </motion.h3>
         <div className="iconos-redes">
-          <div className='fb-icon'>
-            <motion.a href="https://facebook.com" target="_blank" whileHover={{ scale: 1.2 }}>
-              <FaFacebookF />
-            </motion.a>
-          </div>
-          <motion.a href="https://instagram.com" target="_blank" whileHover={{ scale: 1.2 }}>
+          
+          <motion.a href="https://www.instagram.com/boosting_sas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" whileHover={{ scale: 1.2 }}>
             <FaInstagram />
           </motion.a>
-          <motion.a href="https://linkedin.com" target="_blank" whileHover={{ scale: 1.2 }}>
-            <FaLinkedin />
-          </motion.a>
-          <motion.a href="https://youtube.com" target="_blank" whileHover={{ scale: 1.2 }}>
-              <FaXTwitter/>
-          </motion.a>
+          
         </div>
       </section>
 

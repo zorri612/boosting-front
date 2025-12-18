@@ -3,7 +3,16 @@ import { motion } from 'framer-motion';
 import generadorImage from '../../assets/generador2.png'; // Asegúrate de tener esta imagen
 import aceiteImg from "../../assets/transformador-aceite.png"; // reemplaza por tu ruta real
 import secoImg from "../../assets/transformador-seco.png";
+import generadorCamara from "../../assets/generadores/generador-camara.jpeg";
+import generador2 from "../../assets/generadores/generador2.jpeg";
+import generador4 from "../../assets/generadores/generador4.jpeg";
+import generador6 from "../../assets/generadores/generador6.jpeg";
+import devanado from "../../assets/generadores/devanado-comp.png";
+
 import { Helmet } from "react-helmet";
+
+
+import { fromJSON } from 'postcss';
 
 function Generador() {
   return (
@@ -31,7 +40,7 @@ function Generador() {
             transition={{ delay: 0.5, duration: 0.6 }}
           ><strong>
             Hidrogeneradores, Turbogeneradores, Plantas Diésel,<br />
-            Dinamómetros de media potencia
+            Generadores Eléctricos de baja, media y alta potencia.
             </strong>
           </motion.p>
         </div>
@@ -51,49 +60,26 @@ function Generador() {
       ></motion.section>
         <div className="generador-contenido">
            <p>
-           Un generador eléctrico es todo dispositivo capaz de transformar la energía mecánica en eléctrica.
-            Esta transformación se consigue por la acción de un campo magnético sobre los conductores eléctricos
-             dispuestos sobre una armadura (denominada también estátor). Todo el sistema basado principalmente en la ley de Faraday.
-             </p>
-            <p>
-|           Sin embargo, este dispositivo necesita de un sistema de protección ante el control de la energía al que se le denomina
-             sistema de aislamiento.
-            Este sistema de aislamiento esta relacionado directamente con la vida útil del generador y con el funcionamiento libre
-             de fallas en un porcentaje mayor al 60%, por lo que la evaluación de su condición es una prioridad para los dueños de dichas máquinas.
-              </p>
-          <div className="generador-imagen">
-            <img src={generadorImage} alt="Generador eléctrico" />
-          </div>
+            En <strong>Boosting SAS</strong> somos especialistas en el diagnóstico avanzado y mantenimiento integral
+             de generadores eléctricos para la industria. Combinamos ingeniería de alto nivel con
+              técnicas de monitoreo, pruebas especializadas y análisis predictivo para garantizar
+               la confiabilidad, continuidad operativa y máxima eficiencia de sus equipos. Evaluamos el estado real del generador mediante pruebas eléctricas, mecánicas y termográficas, identificamos fallas incipientes y optimizamos el desempeño antes de que se conviertan en tiempos de parada o pérdidas económicas. Nuestro enfoque técnico, riguroso y orientado a resultados permite a nuestros clientes operar con total seguridad, prolongar la vida útil de sus activos y reducir costos operativos a través de un acompañamiento experto y especializado.
+          </p>
 
           <div className="tipos-generador"> 
           <div className="generador"> 
-          <img src={aceiteImg} alt="Generador hidraulico" />
-          <h3>Generadores Hidráulicos</h3>
-          <ul>
-            <li>Ideal para </li>
-            <li>Utiliza  como </li>
-            <li>Mayor  de </li>
-          </ul>
+          <img src={generadorCamara} alt="Generador hidraulico" />
+          <h3>Análisis y Diagnóstico especializado</h3>
         </div>
 
         <div className="generador"> 
-          <img src={secoImg} alt="Generador seco" />
-          <h3>Generadores Diésel</h3>
-          <ul>
-            <li>Ideal</li>
-            <li>Sin  </li>
-            <li>Mayor  ante </li>
-          </ul>
+          <img src={generador2} alt="Generador seco" />
+          <h3>Overhaul general</h3>
         </div>
 
         <div className="generador"> 
-          <img src={secoImg} alt="Turbogenerador" />
-          <h3>Turbogeneradores</h3>
-          <ul>
-            <li>Ideal</li>
-            <li>Sin  </li>
-            <li>Mayor  ante </li>
-          </ul>
+          <img src={devanado} alt="Turbogenerador" />
+          <h3>Recuperación de Sistema de aislamiento</h3>
         </div>
       </div>
         
@@ -103,19 +89,20 @@ function Generador() {
             En Boosting SAS somos especialistas en la evaluación de la condición de los generadores
              a través de un conjunto de diagnósticos de forma integral para todos sus sistemas, 
              no solo el sistema de aislamiento sino también de sistemas como: Lubricación, Acoplamiento,
-              Intercambiador, etc.). Todos estos a través de:
+              Intercambiador, etc. Todos estos a través de:
               </p>
-            <ul className="lista-diagnostico">
-              <li> Resistencia de aislamiento (IR)</li>
-              <li> Índice de polarización (IP)</li>
-              <li> Índice de absorción (DAR)</li>
-              <li> Descarga dieléctrica (DD)</li>
+            <ul className="">
+              <li>Resistencia de aislamiento (IR)</li>
+              <li>Índice de polarización (IP)</li>
+              <li>Índice de absorción (DAR)</li>
+              <li>Descarga dieléctrica (DD)</li>
               <li>Resistencia de devanados</li>
-              <li> Tangente delta (FD)</li>
-              <li> Descargas parciales (DP)</li>
-              <li> Análisis de vibración</li>
-              <li> Evaluación de lubricación</li>
-              <li> Alineación láser</li>
+              <li>Tangente delta (FD)</li>
+              <li>Descargas parciales (DP)</li>
+              <li>Análisis de vibración</li>
+              <li>Evaluación de lubricación</li>
+              <li>Alineación láser</li>
+              <li>Electromagnetic Core Imperfection Detection (ELCID)</li>
             </ul>
           </div>
         </div>

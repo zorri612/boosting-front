@@ -72,9 +72,13 @@
     gap: 2rem;
   }
   
-  .sectionCard .imagePlaceholder {
-    min-width: 40%;
-  }
+.sectionCard .imagePlaceholder,
+.sectionCard .imageCarousel {
+  flex: 0 0 50%;   /* 👈 cámbialo a 55% o 60% si quieres más imagen */
+  max-width: 50%;
+  min-height: 320px; /* para que no quede bajito */
+}
+
 
   /* Clase para invertir el orden */
   .reversed {
@@ -141,6 +145,13 @@
   margin-bottom: 1.5rem;
   border-radius: 5px;
 }
+.caseImagePlaceholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px; /* igual al contenedor */
+  display: block;
+}
 
 .caseTitle {
   font-size: 1.5rem;
@@ -159,4 +170,18 @@
   .casesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.imageCarousel {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.imageCarousel img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }

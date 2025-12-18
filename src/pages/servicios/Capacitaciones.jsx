@@ -8,6 +8,7 @@ import electricoImg from "../../assets/diag-electrico.jpg";
 import mecanicoImg from "../../assets/diag-mecanico.png";
 import sistemasImg from "../../assets/sistemas-inteligentes.png";
 import telecomunicacionesImg from "../../assets/telecomunicaciones.jpg";
+import mef from "../../assets/mef.png";
 import rcaImg from "../../assets/rca.png";
 
 import { Helmet } from "react-helmet";
@@ -77,6 +78,16 @@ function Capacitaciones() {
             Formación en estándares internacionales que rigen la ingeniería eléctrica y electrónica. 
             Conoce cómo aplicar las normas IEEE e IEC en el mantenimiento y operación de máquinas 
             eléctricas (transformadores y motores) con visión global.
+          </ul>
+        </div>
+
+        <div className="capacitacion"> 
+          <img src={mef} alt="capacitacion mef" />
+          <h3>Modelado de Elementos Finitos</h3>
+          <ul>
+            En Boosting SAS ofrecemos formación en modelamiento por elementos finitos (FEM) para ingeniería eléctrica y mecánica,
+            permitiendo analizar esfuerzos, vibraciones, temperatura y campos electromagnéticos. FEM optimiza diseños,
+            evalúa fallas y mejora la toma de decisiones mediante simulación avanzada.
           </ul>
         </div>
 

@@ -15,6 +15,25 @@
     background-color: #f9f9f9;
     
   }
+
+.transformador-proteccion-banner {
+    position: relative;
+    background-image: url('/img/proteccion.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    
+  }
+  
   
   .banner-content {
     background-color: rgba(0, 0, 0, 0.5);
@@ -96,7 +115,7 @@
   }
   
   .lista-diagnostico li::before {
-    content: '✔';
+    
     position: absolute;
     left: 0;
     color: #005B7F;
@@ -169,6 +188,43 @@
 }
 
 .transformador ul li {
+  margin-bottom: 0.4rem;
+}
+
+.transformador-proteccion  {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.transformador-proteccion:hover {
+  transform: translateY(-5px);
+}
+
+.transformador-proteccion  img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.transformador-proteccion  h3 {
+  color: #0056b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.transformador-proteccion ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.transformador-proteccion ul li {
   margin-bottom: 0.4rem;
 }
 

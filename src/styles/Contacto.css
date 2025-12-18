@@ -167,4 +167,20 @@
     color:aqua;
   }
   
-  
+  /* Ajusta el input de react-phone-number-input para que se vea como tus inputs */
+.contacto-form .PhoneInput {
+  width: 100%;
+}
+
+.contacto-form .PhoneInputInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contacto-form .PhoneInputCountry {
+  margin-right: 8px;
+}

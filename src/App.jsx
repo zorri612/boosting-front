@@ -12,11 +12,16 @@ import Cables from './pages/servicios/Cables';
 import Capacitaciones from './pages/servicios/Capacitaciones';
 import Motor from './pages/servicios/Motor';
 import Transformador from './pages/servicios/Transformador';
+import TransformadorSumergido from './pages/servicios/Transf. Sumergidos';
+import TransformadorSeco from './pages/servicios/Transf. Seco';
+//import TransformadorAutotrans from './pages/servicios/Transf. Autotrans';
+import TransformadorProteccion from './pages/servicios/Transf. Proteccion';
 import Otros from './pages/servicios/Otros';
 import Servicios from './pages/Servicios';
 import About from './pages/aboutUs';
 import InfoCardsSection from './pages/InfoCardsSection'; // Ajusta la ruta
 import ServicesSection from './pages/ServicesSection'; // Ajusta la ruta
+import Admin from './pages/Admin';
 
 
 function Header() {
@@ -68,8 +73,8 @@ function Header() {
               <li className="has-submenu">
                 <span className="dropdown-link">Máquinas rotativas ▸</span>
                 <ul className="submenu">
-                  <li><Link to="/servicios/generador">Generadores</Link></li>
-                  <li><Link to="/servicios/motor">Motores</Link></li>
+                  <li><Link to="/servicios/generadores">Generadores</Link></li>
+                  <li><Link to="/servicios/motores">Motores</Link></li>
               </ul>
             </li>
 
@@ -78,7 +83,7 @@ function Header() {
               <ul className="submenu">
                 <li><Link to="/servicios/transformadores/sumergidos">Sumergidos en aceite o ésteres</Link></li>
                 <li><Link to="/servicios/transformadores/secos">Secos</Link></li>
-                <li><Link to="/servicios/transformadores/autotransformadores">Autotransformadores</Link></li>
+                {/*<li><Link to="/servicios/transformadores/autotransformadores">Autotransformadores</Link></li>*/}
                 <li><Link to="/servicios/transformadores/proteccion">Protección y medida</Link></li>
               </ul>
             </li>
@@ -91,6 +96,8 @@ function Header() {
           </div>
           <strong><Link to="/blog" className="nav-link">Blog</Link></strong>
           <strong><Link to="/contacto" className="nav-link">Contacto</Link></strong>
+
+          <button className='btn btn-outline-primary'><Link to="/acceso" className='nav-link'>Acceder</Link></button> 
         </nav>
       </div>
     </header>
@@ -106,42 +113,27 @@ function Body() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         viewport={{ once: true }}
       ></motion.div>
-      <h1 className="body-title">
-        Potenciamos tus Proyectos
-      </h1>
-      <h1 className="body-title">
-         de<span className="text-electric"> Ingeniería Eléctrica</span>
-      </h1>
-      <h3 className="body-subtitle">
-        Tecnología Avanzada para la gestión Inteligente de Activos de Potencia.
-      </h3>
-      <p className="body-subtitle">
-        Diagnóstico | Monitoreo continuo | Soluciones Predictivas | Inteligencia Artificial
-      </p>
 
-      <div className="body-buttons">
-        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="btn btn-primary">
-          Conocer Servicios
-        </motion.button>
+      <section className="">
+  <div className="hero-glass">
+    <h1>
+      Potenciamos tus Proyectos de{" "}
+      <span className="highlight">Ingeniería Eléctrica</span>
+    </h1>
+    <p className="hero-subtitle">
+      Tecnología Avanzada para la gestión Inteligente de Activos de Potencia.
+    </p>
+    <p className="hero-tags">
+      Diagnóstico | Monitoreo continuo | Soluciones Predictivas | Inteligencia Artificial
+    </p>
 
-        <Link to="/aboutus" className="btn btn-outline-secondary">Sobre Nosotros</Link>
-        </div>
+    <div className="hero-buttons">
+      <Link to="/contacto"><button className="btn-primary">¡Contáctanos!</button></Link>
+      <Link to="/aboutus"><button className="btn-ghost">Sobre Nosotros</button></Link>
+    </div>
+  </div>
+</section>
 
-        <div className="contenedor-introduccion-nuevos-servicios">
-          <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        viewport={{ once: true }}
-        ></motion.div>
-        <h2 className="titulo-introduccion-nuevos-servicios">
-          Boosting se actualizó para ti.
-        </h2>
-        <h3 className="titulo-introduccion-nuevos-servicios">
-          Explora nuestros <span className="text-electric"> Nuevos Servicios, </span>
-          con la excelencia técnica de siempre.
-        </h3>
-        </div>
 
 
         <div className='body-info-cards'>
@@ -176,16 +168,20 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/servicios/:servicio" element={<Body />} />
-        <Route path="/servicios/generador" element={<Generador />} />
+        <Route path="/servicios/generadores" element={<Generador />} />
         <Route path="/servicios/lineas" element={<Lineas />} />
         <Route path="/servicios/actuador" element={<Actuador />} />
         <Route path="/servicios/cables" element={<Cables />} />
         <Route path="/servicios/capacitaciones" element={<Capacitaciones />} />
         <Route path="/servicios/otros" element={<Otros />} />
-        <Route path="/servicios/motor" element={<Motor />} />
-        <Route path="/servicios/transformador" element={<Transformador />} />
+        <Route path="/servicios/motores" element={<Motor />} />
+        <Route path="/servicios/transformadores" element={<Transformador />} />
+        <Route path="/servicios/transformadores/sumergidos" element={<TransformadorSumergido />} />
+        <Route path="/servicios/transformadores/secos" element={<TransformadorSeco />} />
+        <Route path="/servicios/transformadores/proteccion" element={<TransformadorProteccion />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/aboutus" element={<About />} />
+        <Route path="/acceso" element={<Admin />} />
 
         
 

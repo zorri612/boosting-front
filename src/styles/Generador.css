@@ -73,11 +73,30 @@
     text-align: justify;
   }
   
+  /* 1. Estilos del CONTENEDOR para alinear las imágenes (usando Flexbox) */
+.generador-imagen {
+  display: flex; /* <-- ¡La clave para ponerlas una al lado de la otra! */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 20px; /* Añade espacio entre las imágenes */
+  flex-wrap: wrap; /* Asegura que si hay muchas, pasen a la siguiente línea en móviles */
+}
+
+/* 2. Estilos de las IMÁGENES individuales */
+.generador-imagen img {
+  /* Usaremos un porcentaje menor para el ancho, ajustado para el espacio entre ellas */
+  width: 300px; /* Tamaño fijo, o... */
+  max-width: 45%; /* ...un porcentaje, para que dos quepan con espacio */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Opcional: Ajuste para el móvil */
+@media (max-width: 768px) {
   .generador-imagen img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 100%; /* Una imagen por línea en móvil */
   }
+}
   
   .generador-detalles {
     flex: 1;
@@ -102,6 +121,8 @@
     list-style: none;
     padding-left: 0;
     color: #2d2d2d;
+    text-align: center;
+    font-weight: 700;
   }
   
   .lista-diagnostico li {
@@ -109,14 +130,19 @@
     font-size: 1rem;
     position: relative;
     padding-left: 1.5rem;
+    text-align: center;
+
   }
   
   .lista-diagnostico li::before {
     content: '✔';
     position: absolute;
-    left: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: #005B7F;
-    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1;
   }
   
   /* NUEVO */
@@ -129,6 +155,15 @@
 }
 
 .generador {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.generador-bigger {
   background: white;
   padding: 1.5rem;
   border-radius: 15px;
@@ -164,3 +199,4 @@
 .generador ul li {
   margin-bottom: 0.4rem;
 }
+

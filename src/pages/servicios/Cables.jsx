@@ -15,6 +15,7 @@ import cable2_2 from "../../assets/cables-img/cable2_2.png";
 import cable3_1 from "../../assets/cables-img/cable3_1.png";
 import cable3_2 from "../../assets/cables-img/cable3_2.png";
 import cable3_3 from "../../assets/cables-img/cable3_3.png";
+import cable4 from "../../assets/cables-img/cable4.jpeg";
 
 // Datos para las tarjetas (puedes añadir más si tienes más de 3)
 const cableData = [
@@ -23,7 +24,7 @@ const cableData = [
     description: `Verificamos la integridad del sistema de aislamiento mediante técnicas como descargas parciales, tangente delta y RI.`,
     description2: `Estas pruebas permiten:`,
     features: ["•	Detectar defectos invisibles a simple vista en el aislamiento.", "•	Reducir el riesgo de fallas eléctricas inesperadas.", "•	Extender la vida útil de los cables."],
-    images: [cable1_1, cable1_2],
+    images: [cable1_1, cable1_2, cable4],
     description3: `Beneficio clave: seguridad y confiabilidad al máximo nivel.`,
 
   },

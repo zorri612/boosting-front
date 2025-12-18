@@ -2,6 +2,16 @@
 
 import React from 'react';
 import '../styles/AboutUs.css';
+import { Helmet } from "react-helmet";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
 
 const AboutUs = () => {
   // Array de objetos para los casos de éxito
@@ -13,6 +23,7 @@ const AboutUs = () => {
             apoyando en el diagnóstico técnico a ENEE, la principal empresa de energía del país. Estas
             alianzas internacionales son un reflejo de nuestra capacidad para entregar resultados
             excepcionales, sin importar el lugar.`,
+            imgSrc: "/img/aboutus/honduras.jpeg",
       imagePlaceholder: "Imagen del proyecto 1"
     },
     {
@@ -22,6 +33,7 @@ const AboutUs = () => {
             la seguridad y la operatividad de estos activos críticos. Además, hemos sido el soporte
             técnico clave en la reparación de transformadores de potencia de 80 MVA, garantizando la
             continuidad operativa de estas unidades esenciales.`,
+            imgSrc: "/img/aboutus/nacional.jpeg",
       imagePlaceholder: "Imagen del proyecto 2"
     },
     {
@@ -31,6 +43,7 @@ const AboutUs = () => {
             diferentes empresas. Cada uno de estos servicios está diseñado para optimizar el
             rendimiento y la vida útil de los activos eléctricos de nuestros clientes.
             `,
+      imgSrc: "/img/aboutus/local.jpeg",
       imagePlaceholder: "Imagen del proyecto 3"
     },
     {
@@ -43,25 +56,28 @@ const AboutUs = () => {
             integridad del activo y la seguridad de las operaciones, maximizando su vida útil y
             optimizando los costos para nuestro cliente.
 `,
+      imgSrc: "/img/aboutus/DP.jpeg",
       imagePlaceholder: "Imagen del proyecto 4"
     },
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Sobre Nosotros | Boosting</title>
+      </Helmet>
+
     <div className="aboutUsContainer">
       <h1><strong><span className="text-electric"> Sobre Nosotros</span></strong></h1>
 
       <div className="introSection">
-        <p>
-          Aquí puedes poner una breve introducción a tu empresa.
-          Algo que capture la esencia de lo que hacen antes de entrar en los detalles.
-        </p>
+        
       </div>
 
       {/* Sección 1: Nuestra Historia */}
       <div className="sectionCard">
         <div className="imagePlaceholder">
-          Espacio para una imagen de la fundación
+          <img src="/img/aboutus/aboutus1.jpeg" alt="Nuestra Historia" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
         <div className="content">
           <h2 className="cardTitle">Nuestra Historia</h2>
@@ -82,9 +98,27 @@ const AboutUs = () => {
 
       {/* Sección 2: Nuestro Presente */}
       <div className="sectionCard reversed">
-        <div className="imagePlaceholder">
-          Espacio para una imagen del equipo actual o de sus oficinas
-        </div>
+       <div className="imageCarousel">
+        <Swiper
+          modules={[Autoplay, Pagination, Navigation]}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          loop
+          pagination={{ clickable: true }}
+          navigation
+          spaceBetween={12}
+          slidesPerView={1}
+        >
+          <SwiperSlide>
+            <img src="/img/aboutus/aboutus2.jpeg" alt="Equipo Boosting 1" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/img/aboutus/aboutus3.jpeg" alt="Equipo Boosting 2" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/img/aboutus/aboutus4.jpeg" alt="Equipo Boosting 3" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
         <div className="content">
           <h2 className="cardTitle">Nuestro Presente</h2>
           <p>
@@ -94,7 +128,7 @@ const AboutUs = () => {
             químicos, plásticos y combustibles.
             Además, ha expandido sus operaciones a <strong>Centroamérica</strong>, realizando
             mantenimiento de activos de potencia superiores a 10 MW en <strong>Belice</strong> y
-            <strong>Honduras</strong>.
+            <strong> Honduras</strong>.
             Con más de <strong>100 intervenciones exitosas</strong> en actualización, mantenimiento y
             reparación de activos eléctricos, Boosting ha alcanzado sus metas,
             posicionándose como un referente en confiabilidad y excelencia industrial.
@@ -105,7 +139,7 @@ const AboutUs = () => {
       {/* Sección 3: Nuestro Futuro */}
       <div className="sectionCard">
         <div className="imagePlaceholder">
-          Espacio para una imagen de la visión a futuro o un proyecto innovador
+          <img src="/img/aboutus/aboutus5.png" alt="Nuestro Futuro" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
         <div className="content">
           <h2 className="cardTitle">Nuestro Futuro</h2>
@@ -134,7 +168,11 @@ const AboutUs = () => {
           {successCases.map((caso, index) => (
             <div key={index} className="caseCard">
               <div className="caseImagePlaceholder">
-                {caso.imagePlaceholder}
+                {caso.imgSrc ? (
+                  <img src={caso.imgSrc} alt={caso.title} />
+                ) : (
+                  caso.imagePlaceholder
+                )}
               </div>
               <h3 className="caseTitle">{caso.title}</h3>
               <p className="caseText">
@@ -151,6 +189,7 @@ const AboutUs = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 
